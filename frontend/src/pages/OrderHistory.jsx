@@ -11,7 +11,7 @@ const OrderHistory = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "bookstore-bee-production.up.railway.app/api/v1/get-order-history",
+        "https://bookstore-bee-production.up.railway.app/api/v1/get-order-history",
         { headers }
       );
 

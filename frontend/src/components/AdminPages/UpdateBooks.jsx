@@ -16,7 +16,7 @@ const UpdateBooks = () => {
     window.scrollTo(0, 0);
     const fetch = async () => {
       const res = await axios.get(
-        `bookstore-bee-production.up.railway.app/api/v1/get-book-by-id/${id}`
+        `https://bookstore-bee-production.up.railway.app/api/v1/get-book-by-id/${id}`
       );
 
       setData({
@@ -53,7 +53,7 @@ const UpdateBooks = () => {
         alert("All fields are required");
       } else {
         const response = await axios.put(
-          "bookstore-bee-production.up.railway.app/api/v1/update-book",
+          "https://bookstore-bee-production.up.railway.app/api/v1/update-book",
           Data,
           { headers }
         );

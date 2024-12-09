@@ -6,7 +6,7 @@ const RecentlyAdded = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "bookstore-bee-production.up.railway.app/api/v1/get-recent-books"
+        "https://bookstore-bee-production.up.railway.app/api/v1/get-recent-books"
       );
       setBooks(response.data.data);
     };

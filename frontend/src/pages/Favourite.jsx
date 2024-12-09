@@ -11,7 +11,7 @@ const Favourite = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "bookstore-bee-production.up.railway.app/api/v1/get-favourite-books",
+        "https://bookstore-bee-production.up.railway.app/api/v1/get-favourite-books",
         { headers }
       );
 

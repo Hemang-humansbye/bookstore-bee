@@ -31,7 +31,7 @@ const AddBook = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          "bookstore-bee-production.up.railway.app/api/v1/add-book",
+          "https://bookstore-bee-production.up.railway.app/api/v1/add-book",
           Data,
           { headers }
         );

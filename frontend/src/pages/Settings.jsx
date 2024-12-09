@@ -16,7 +16,7 @@ const Settings = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "bookstore-bee-production.up.railway.app/api/v1/getUserData",
+        "https://bookstore-bee-production.up.railway.app/api/v1/getUserData",
         { headers }
       );
       setProfileData(response.data);
@@ -27,7 +27,7 @@ const Settings = () => {
 
   const updateAddress = async () => {
     const res = await axios.put(
-      "bookstore-bee-production.up.railway.app/api/v1/update-user-address",
+      "https://bookstore-bee-production.up.railway.app/api/v1/update-user-address",
       Value,
       {
         headers,

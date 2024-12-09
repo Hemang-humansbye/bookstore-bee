@@ -8,7 +8,7 @@ const AllBooks = () => {
     window.scrollTo(0, 0);
     const fetch = async () => {
       const response = await axios.get(
-        "bookstore-bee-production.up.railway.app/api/v1/get-all-books"
+        "https://bookstore-bee-production.up.railway.app/api/v1/get-all-books"
       );
       setBooks(response.data.data);
     };

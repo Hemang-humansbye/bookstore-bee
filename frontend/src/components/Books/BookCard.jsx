@@ -10,7 +10,7 @@ const BookCard = ({ image, title, author, price, bookid, fav }) => {
   const removeFromFavourite = async () => {
     try {
       const response = await axios.put(
-        "bookstore-bee-production.up.railway.app/api/v1/remove-from-favourite",
+        "https://bookstore-bee-production.up.railway.app/api/v1/remove-from-favourite",
         {},
         { headers }
       );

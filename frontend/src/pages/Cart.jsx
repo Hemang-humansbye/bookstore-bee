@@ -22,7 +22,7 @@ const Cart = () => {
     } else {
       const fetch = async () => {
         const res = await axios.get(
-          "bookstore-bee-production.up.railway.app/api/v1/get-user-cart",
+          "https://bookstore-bee-production.up.railway.app/api/v1/get-user-cart",
           { headers }
         );
 
@@ -44,7 +44,7 @@ const Cart = () => {
   const deletItem = async (id) => {
     try {
       const response = await axios.put(
-        `bookstore-bee-production.up.railway.app/api/v1/remove-from-cart/${id}`,
+        `https://bookstore-bee-production.up.railway.app/api/v1/remove-from-cart/${id}`,
         {},
         { headers }
       );
@@ -56,7 +56,7 @@ const Cart = () => {
   const PlaceOrder = async () => {
     try {
       const response = await axios.post(
-        `bookstore-bee-production.up.railway.app/api/v1/place-order`,
+        `https://bookstore-bee-production.up.railway.app/api/v1/place-order`,
         { order: Cart },
         { headers }
       );
