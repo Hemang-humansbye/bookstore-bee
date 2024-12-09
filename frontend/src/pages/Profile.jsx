@@ -22,7 +22,7 @@ const Profile = () => {
     } else {
       const fetch = async () => {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/getUserData",
+          "bookstore-bee-production.up.railway.app/api/v1/getUserData",
           { headers }
         );
         setProfileData(response.data);

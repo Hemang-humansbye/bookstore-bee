@@ -24,7 +24,7 @@ const Login = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/v1/login",
+          "bookstore-bee-production.up.railway.app/api/v1/login",
           Data
         );
         setData({ username: "", password: "" });

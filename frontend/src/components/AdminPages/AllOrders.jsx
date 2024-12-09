@@ -20,7 +20,7 @@ const AllOrders = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        "http://localhost:5000/api/v1/get-all-orders",
+        "bookstore-bee-production.up.railway.app/api/v1/get-all-orders",
         { headers }
       );
 
@@ -36,7 +36,7 @@ const AllOrders = () => {
   const submitChanges = async (i) => {
     const id = OrderHistory[i]._id;
     const response = await axios.put(
-      `http://localhost:5000/api/v1/update-status/${id}`,
+      `bookstore-bee-production.up.railway.app/api/v1/update-status/${id}`,
       Values,
       { headers }
     );

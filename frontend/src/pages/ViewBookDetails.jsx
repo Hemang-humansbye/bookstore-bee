@@ -17,7 +17,7 @@ const ViewBookDetails = () => {
     window.scrollTo(0, 0);
     const fetch = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/v1/get-book-by-id/${id}`
+        `bookstore-bee-production.up.railway.app/api/v1/get-book-by-id/${id}`
       );
       setBook(res.data.data);
     };
@@ -31,7 +31,7 @@ const ViewBookDetails = () => {
   const addToFavourite = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:5000/api/v1/add-to-favourite",
+        "bookstore-bee-production.up.railway.app/api/v1/add-to-favourite",
         {},
         { headers }
       );
@@ -43,7 +43,7 @@ const ViewBookDetails = () => {
   const addToCart = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:5000/api/v1/add-to-cart",
+        "bookstore-bee-production.up.railway.app/api/v1/add-to-cart",
         {},
         { headers }
       );
@@ -55,7 +55,7 @@ const ViewBookDetails = () => {
   const deleteBook = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:5000/api/v1/delete-book",
+        "bookstore-bee-production.up.railway.app/api/v1/delete-book",
         { headers }
       );
       alert(response.data.message);
